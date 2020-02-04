@@ -20,9 +20,26 @@ class MainActivity : AppCompatActivity() {
             arrayOf(button12,button13,button14,button15))
     }
 
-    fun sayHello(v: View) {
-        val randomNumber = Math.random() * 4
+    fun play(v: View) {
+        button16.text = "Surrender"
+        val randomRow = Math.random() * 4
         val randomColumn = Math.random() * 4
-        buttonArray[randomNumber.toInt()][randomColumn.toInt()].text = "2"
+
+        buttonArray[randomRow.toInt()][randomColumn.toInt()].text = "2"
+
+
+
+        var randomRow2 = Math.random() * 4
+        var randomColumn2 = Math.random() * 4
+
+        while(randomRow == randomRow2 && randomColumn == randomColumn2) {
+            randomRow2 = Math.random() * 4
+            randomColumn2 = Math.random() * 4
+        }
+
+        buttonArray[randomRow2.toInt()][randomColumn2.toInt()].text = "2"
+
+
+
     }
 }
