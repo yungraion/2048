@@ -22,12 +22,17 @@ class MainActivity : AppCompatActivity() {
 
     fun play(v: View) {
         button16.text = "Surrender"
+
+        for (row in 0..3) {
+            for (column in 0..3) {
+                buttonArray[row][column].text = ""
+            }
+        }
+
         val randomRow = Math.random() * 4
         val randomColumn = Math.random() * 4
 
         buttonArray[randomRow.toInt()][randomColumn.toInt()].text = "2"
-
-
 
         var randomRow2 = Math.random() * 4
         var randomColumn2 = Math.random() * 4
@@ -38,6 +43,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonArray[randomRow2.toInt()][randomColumn2.toInt()].text = "2"
+
+
 
 
 
